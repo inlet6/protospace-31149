@@ -1,10 +1,10 @@
 class PrototypesController < ApplicationController
   def index
-    @prototype = Prototype.all
+    @prototypes = Prototype.all
   end
 
   def new
-    @prototype = Prototype
+    @prototypes = Prototype
   end
 
   def create
@@ -14,6 +14,9 @@ class PrototypesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
   end
 
   private
