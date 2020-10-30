@@ -10,6 +10,9 @@
         <%= "こんにちは、" %>
         <%# <%= link_to "ユーザー名さん", root_path, class: :greeting__link%>
         <%= link_to "#{current_user.name}さん", root_path, class: :greeting__link%>
+        <% @prototype.each do |prototype| %>
+          <%= render partial: "prototype", locals: { prototype: @prototype } %>
+        <% end %>
       </div>
       <%# </div> %>
     <% end %>
